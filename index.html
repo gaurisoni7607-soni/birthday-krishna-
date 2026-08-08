@@ -5,6 +5,29 @@ body{margin:0;font-family:Arial;background:linear-gradient(135deg,#ffd6ec,#e6d6f
 .box{max-width:800px;margin:30px auto;background:#fff8;border-radius:20px;padding:24px;backdrop-filter:blur(6px)}
 h1{color:#ff4f8b}button{padding:12px 22px;border:none;border-radius:25px;background:#ff4f8b;color:#fff;font-size:18px}
 #letter{display:none;text-align:left;white-space:pre-wrap}
+ .photo-bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+}
+
+.photo-bg img{
+  position:absolute;
+  width:130px;
+  opacity:0.20;
+  border-radius:20px;
+}
+
+.photo-bg img:nth-child(1){top:18%;left:3%;transform:rotate(-8deg);}
+.photo-bg img:nth-child(2){top:42%;right:3%;transform:rotate(7deg);}
+.photo-bg img:nth-child(3){top:65%;left:4%;transform:rotate(6deg);}
+.photo-bg img:nth-child(4){top:82%;right:4%;transform:rotate(-7deg);}
+
+.box,h1{
+  position:relative;
+  z-index:1;
+} 
 </style></head><body>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 <body>
@@ -53,4 +76,10 @@ window.onload = function () {
 </div>
 </div>
 </body>
+  <div class="photo-bg">
+  <img src="Gallery_1786084887256.png">
+  <img src="Gallery_1786084902639.png">
+  <img src="Gallery_1786084920063.png">
+  <img src="Gallery_1786084934061.png">
+  </div>
 </html>
